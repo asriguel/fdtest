@@ -1,0 +1,44 @@
+
+
+export default class ProductsData {
+
+     products =  [
+        {
+            'id': 0,
+            'category': 'Men',
+            'name' : 'T-SHIRT',
+            'price' : '3.20',
+            'image' : './product-1.png',
+            'size' : ['S', 'M', 'L', 'XL'],
+            'color': ['Black', 'White']
+
+        },
+        {
+            'id': 1,
+            'category': 'Women',
+            'image' : './product-2.png',
+            'name' : 'T-SHIRT',
+            'price' : '3.20',
+            'size' : ['S', 'M', 'XL'],
+            'color': ['Black', 'White']
+        },
+        {
+            'id': 2,
+            'category': 'Children',
+            'image' : './product-1.png',
+            'price' : '3.21',
+            'name' : 'T-SHIRT',
+            'color': ['Black', 'White']
+        }
+    ];
+
+     GetProducts ()
+    {
+        return products;
+    }
+
+     getProduct(id) {
+        return product[id];
+    }
+}
+

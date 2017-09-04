@@ -1,0 +1,402 @@
+$default-font: 'Quicksand', sans-serif
+$defautTextClr: #424242
+$accentClr: #aa9b77
+$secondClr: #f5f6f7
+$test: #46ac34
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:100,400,700')
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
+@import "rewrites"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.75
+  font-family: $default-font
+  font-weight: bold
+  overflow-x: hidden
+  opacity: 1
+  margin: 0
+  color: $defautTextClr
+
+
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-test
+  color: $test
+
+.container
+  width: 1090px
+  margin: 0 auto
+
+.primary-layout
+  width: 100%
+  float: left
+  padding-bottom: 40px
+
+/*---header---*/
+
+.header
+  padding: 25px 30px 17px
+
+.header__logo
+  text-align: center
+
+.logo__image
+  width: 200px
+
+/*--breadcrumbs--*/
+
+.breadcrumbs
+  background-color: #f5f6f7
+  padding-top: 48px
+  padding-bottom: 48px
+  &__link
+    text-transform: uppercase
+    text-decoration: none
+    font-size: 18px
+    color: $defautTextClr
+    &:hover
+      color: $accentClr
+    &:before
+      content: ''
+
+
+/*--filters--*/
+
+.filters
+  margin-bottom: 13px
+  &__checkbox
+    display: none
+  &__checkbox-label
+    font-size: 18px
+    text-transform: uppercase
+    margin-right: 40px
+    position: relative
+    cursor: pointer
+    &:before
+      content: ''
+      display: inline-block
+      height: 23px
+      width: 23px
+      border: 2px solid #ccc
+      margin: 0 20px -5px 0
+      border-radius: 3px
+      background: #fff
+    &:after
+      content: "\f00c"
+      color: lighten($accentClr, 30%)
+      font-family: FontAwesome
+      position: absolute
+      left: 0
+      top: 0
+      display: block
+      text-align: center
+      width: 23px
+      font-size: 16px
+      line-height: 23px
+      opacity: 0
+    &:hover
+      &:before
+        border: 2px solid lighten($accentClr, 5%)
+
+      &:after
+        opacity: 0.5
+
+    &_active
+      &:before
+        border: 2px solid $accentClr
+      &:after
+        content: "\f00c"
+        color: $accentClr
+        font-family: FontAwesome
+        position: absolute
+        left: 0
+        top: 0
+        opacity: 1
+        display: block
+        text-align: center
+        width: 23px
+        font-size: 16px
+        line-height: 23px
+
+  &__sort
+    padding: 19px 0
+
+
+
+.filters__categories
+  background-color: $secondClr
+  padding: 56px 0
+
+.filter__name
+  text-transform: uppercase
+  font-size: 20px
+  float: left
+
+.filters__sort-dropdown
+  float: left
+  padding: 4px 0
+  text-transform: uppercase
+  margin-left: 30px
+  cursor: pointer
+
+  .Dropdown-arrow
+    font-weight: 100
+/*--products--*/
+
+.products
+
+  &:nth-child(odd)
+    .owl-nav
+      left: 31px
+    .slider__counter
+      left: 31px
+    .products__title
+      span
+        float: right
+        padding-left: 50px
+        padding-right: 0
+  &__title
+    font-size: 20px
+    text-align: left
+    float: left
+    width: 100%
+    margin-top: 0
+    margin-bottom: 49px
+    text-transform: uppercase
+    span
+      display: block
+      float: left
+      background: #fff
+      padding-right: 50px
+    &:after
+      content: ""
+      display: block
+      border-bottom: 3px solid #ccc
+      height: 19px
+  &__category-line
+    float: left
+    width: 100%
+    margin-bottom: 93px
+
+
+@mixin calc($property, $expression)
+  #{$property}: -webkit-calc(#{$expression})
+  #{$property}: -moz-calc(#{$expression})
+  #{$property}: calc(#{$expression})
+
+.row
+  margin:
+    left: -32px
+    right: -32px
+
+.col-item-3
+  float: left
+  padding: 0 32px
+  width: 100%
+  //width: 33.333%
+
+
+.product
+  box-sizing: border-box
+  height: 378px
+  background: $secondClr
+  //margin-right: 64px
+  border-radius: 2px
+  position: relative
+  cursor: pointer
+  transition: all .1s ease
+  border: 6px solid $secondClr
+  padding: 19px
+  &:hover
+    border: 6px solid $accentClr
+  &__link
+    text-decoration: none
+
+  &__image
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    padding: 70px 0
+    text-align: center
+    z-index: 1
+    img
+      height: 100%
+      width: auto!important
+      display: inline!important
+  &__dropdown
+    .Dropdown-option
+      pointer-events: none
+
+
+  &__name, &__price, &__price, &__color-option
+    position: absolute
+    z-index: 2
+    color: $defautTextClr
+  &__name
+    color: $accentClr
+    bottom: 13px
+    left: 19px
+    font-size: 18px
+  &__price
+    right: 19px
+    bottom: 13px
+    font-size: 22px
+  &__dropdown
+    z-index: 10
+    position: absolute
+    top: 19px
+    text-transform: uppercase
+    font-size: 16px
+  &__color-option
+    top: 19px
+    right: 19px
+  &__colors-list
+    list-style: none
+    padding-left: 0
+    margin: 0
+  &__color
+    display: inline-block
+    margin-left: 5px
+    line-height: 1
+    span
+      display: inline-block
+      width: 22px
+      height: 22px
+      border-radius: 50%
+      background: #666666
+
+.slider
+  position: relative
+  float: left
+  width: 100%
+  &__counter
+    position: absolute
+    right: 31px
+    font-size: 16px
+    top: -36px
+    color: $accentClr
+
+//color
+.color
+  &_black
+    span
+      background: #535253
+  &_blue
+    span
+      background: #165eb9
+  &_yellow
+    span
+      background: #ffe637
+  &_white
+    span
+      background: #fff
+
+/*--product-page--*/
+
+.info__line
+  display: table-row
+  &>*
+    display: table-cell
+    padding: 0 22px 35px
+    vertical-align: top
+    line-height: 1
+    font-size: 22px
+    text-transform: uppercase
+
+
+.one-product
+  &__wrapper
+  &__container
+    //f5f6f7
+    padding: 98px 32px
+    background-color: $secondClr
+    border: 6px solid $accentClr
+    border-radius: 4px
+    float: left
+    width: 100%
+    position: relative
+    min-height: 376px
+    max-height: 1030px
+    margin-bottom: 38px
+    //height: 1030px
+  &__colors-list
+    vertical-align: middle
+  &__title
+    margin: 87px 0 100px 0
+  &__info
+    float: right
+    width: 37.6%
+    display: table
+  &__image
+    height: 100%
+    width: 62.3%
+    float: left
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    img
+      height: auto
+      max-width: 100%
+
+.breadcrumbs__link
+  padding-left: 40px
+  position: relative
+.link_back
+  &:before
+    content: "\f053"
+    font-family: FontAwesome
+    display: block
+    position: absolute
+    left: 0
+    bottom: 0
+    font-size: 12px
+
+
+@import "Button"
+@import "media"
