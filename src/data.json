@@ -1,44 +1,177 @@
-
-
-export default class ProductsData {
-
-     products =  [
-        {
-            'id': 0,
-            'category': 'Men',
-            'name' : 'T-SHIRT',
-            'price' : '3.20',
-            'image' : './product-1.png',
-            'size' : ['S', 'M', 'L', 'XL'],
-            'color': ['Black', 'White']
-
-        },
-        {
-            'id': 1,
-            'category': 'Women',
-            'image' : './product-2.png',
-            'name' : 'T-SHIRT',
-            'price' : '3.20',
-            'size' : ['S', 'M', 'XL'],
-            'color': ['Black', 'White']
-        },
-        {
-            'id': 2,
-            'category': 'Children',
-            'image' : './product-1.png',
-            'price' : '3.21',
-            'name' : 'T-SHIRT',
-            'color': ['Black', 'White']
-        }
-    ];
-
-     GetProducts ()
+{
+  "products": [
     {
-        return products;
+      "id": 0,
+      "category": "Men",
+      "name": "T-SHIRT",
+      "price": "3.20",
+      "image": "./product-1.png",
+      "imageBig": "./product-big-1.png",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Blue",
+        "Yellow",
+        "Black"
+      ]
+    },
+    {
+      "id": 1,
+      "category": "Men",
+      "name": "T-SHIRT",
+      "price": "3.20",
+      "image": "./product-1.png",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Blue",
+        "Yellow",
+        "Black"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Men",
+      "name": "T-SHIRT",
+      "price": "3.20",
+      "image": "./product-1.png",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Blue",
+        "Yellow",
+        "Black"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Men",
+      "name": "T-SHIRT",
+      "price": "3.20",
+      "image": "./product-1.png",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Blue",
+        "Yellow",
+        "Black"
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Women",
+      "image": "./product-2.png",
+      "name": "Pants",
+      "price": "3.20",
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Children",
+      "image": "./product-1.png",
+      "price": "3.21",
+      "name": "T-SHIRT",
+      "color": [
+        "Black",
+        "White"
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Women",
+      "image": "./product-2.png",
+      "name": "Pants",
+      "price": "3.20",
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Women",
+      "image": "./product-2.png",
+      "name": "Pants",
+      "price": "3.20",
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Women",
+      "image": "./product-2.png",
+      "name": "Pants",
+      "price": "3.20",
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ]
+    },
+    {
+      "id": 9,
+      "category": "Women",
+      "image": "./product-2.png",
+      "name": "Pants",
+      "price": "3.20",
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ]
+    },
+    {
+      "id": 10,
+      "category": "Women",
+      "image": "./product-2.png",
+      "name": "Pants",
+      "price": "3.20",
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ]
     }
 
-     getProduct(id) {
-        return product[id];
-    }
+  ],
+    "showCategory" : [
+      {
+     "id" : 0,
+        "name" : "men",
+       "show": true
+    },
+      {
+        "id" : 1,
+        "name" : "women",
+        "show": false
+      },  {
+        "id" : 2,
+        "name" : "children",
+        "show": false
+      }
+  ]
 }
-

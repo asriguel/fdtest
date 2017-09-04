@@ -1,4 +1,22 @@
 .button
-  background: $accentClr
+  font-size: 14px
+  text-transform: uppercase
+  color: #ffffff
+  padding: 20px 32px
+  text-align: center
+  line-height: 0.9
+  outline: none
+  border-radius: 4px
+  border: none
+  cursor: pointer
+  transition: all .1s ease
   &_default
-    color: red
+    background: $accentClr
+    &:hover
+      background: darken($accentClr , 10%)
+    &:active
+      background: darken($accentClr , 17%)
+
+.filters__button
+  float: right
+  margin-top: -10px

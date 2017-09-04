@@ -7,7 +7,9 @@ $test: #46ac34
 @import url('https://fonts.googleapis.com/css?family=Quicksand:100,400,700')
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
 
-@import "rewrites"
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css')
+
+@import "assets/sass/rewrites"
 
 *
   -webkit-box-sizing: border-box
@@ -55,8 +57,6 @@ body
   opacity: 1
   margin: 0
   color: $defautTextClr
-
-
 
 .img-responsive
   display: block
@@ -398,5 +398,5 @@ body
     font-size: 12px
 
 
-@import "Button"
-@import "media"
+@import "assets/sass/Button"
+@import "assets/sass/media"
